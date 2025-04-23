@@ -159,79 +159,24 @@ document.querySelector("form").addEventListener("submit", validateForm);
 
 
 //Shoping cart functionality 
-const taxRate = 0.085;
-const shippingCost = 5.00;
-const cartItems = {};
-const cartMsg = document.getElementById("cartMsg");
-const selectedItems = document.getElementById("selectedItems");
-const subTotalDisplay = document.getElementById("subTotal");
-const totalDisplay = document.getElementById("total");
-const checkOutButton = document.getElementById("checkOut");
+let shopingCart = () => {
+    //constant variables
+    const taxRate = 0.085;
+    const shippingCost = 5.00;
 
-const products = [
-    { id: "p1", name: "T-Shirt", price: 19.99 },
-    { id: "p2", name: "Hoodie", price: 39.99 },
-    { id: "p3", name: "Sweatshirt", price: 29.99 }
-];
+    //DOM
+    let cartMsg = document.getElementById("cartMsg");
+    let subTotal = document.getElementById("subTotal");
+    let total = document.getElementById("total");
+    let selectedItems = document.getElementById("selectedItems");
+    let checkOutBtn = document.getElementById("checkout");
+    let checkboxes = document.querySelectorAll("#shopping input[type='checkbox']");
 
-products.forEach(product => {
-    const checkbox = document.querySelector(`#${product.id} input[type="checkbox"]`);
-    checkbox.addEventListener("change", () => {
-        if (checkbox.checked) {
-            cartItems[product.id] = product;
-        } else {
-            delete cartItems[product.id];
-        }
-        updateCartDisplay();
-    });
-});
+    //Map to hold cart items
+    let cart = new Map();
 
-function updateCartDisplay() {
-    selectedItems.innerHTML = ""; // clear current list
-    const itemKeys = Object.keys(cartItems);
+    //function to update cart
+    let updateCartDisplay = () => {
 
-    if (itemKeys.length === 0) {
-        selectedItems.innerHTML = `<li id="cartMsg">Your cart is empty</li>`;
-        subTotalDisplay.textContent = "$0.00";
-        totalDisplay.textContent = "$0.00";
-        return;
     }
-
-    let subtotal = 0;
-    itemKeys.forEach(key => {
-        const item = cartItems[key];
-        subtotal += item.price;
-
-        const li = document.createElement("li");
-        li.textContent = `${item.name} - $${item.price.toFixed(2)}`;
-        selectedItems.appendChild(li);
-    });
-
-    const tax = subtotal * taxRate;
-    const total = subtotal + tax + shippingCost;
-
-    subTotalDisplay.textContent = `$${subtotal.toFixed(2)}`;
-    totalDisplay.textContent = `$${total.toFixed(2)}`;
 }
-
-checkOutButton.addEventListener("click", () => {
-    const itemKeys = Object.keys(cartItems);
-    if (itemKeys.length === 0) {
-        alert("Please add items to your cart before checking out.");
-        return;
-    }
-
-    const subtotal = itemKeys.reduce((sum, key) => sum + cartItems[key].price, 0);
-    const tax = subtotal * taxRate;
-    const total = subtotal + tax + shippingCost;
-
-    alert(`Thank you for your order! Your total is $${total.toFixed(2)}.`);
-
-    // Clear cart
-    itemKeys.forEach(id => {
-        const checkbox = document.querySelector(`#${id} input[type="checkbox"]`);
-        checkbox.checked = false;
-    });
-    Object.keys(cartItems).forEach(key => delete cartItems[key]);
-    updateCartDisplay();
-});
