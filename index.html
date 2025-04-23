@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 minimum-scale=1">
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter&family=Poppins:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- stylesheet  -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/83dfa25033.js" crossorigin="anonymous"></script>
+
+    <script src="script.js" defer></script>
+
+    <title>Phx Auto Care</title>
+</head>
+<body>
+    <header class="primary-header flex fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <img src="images/IMG_0537.png" alt="" class="navbar-image">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  <a class="nav-link" href="#about-us">About</a>
+                  <a class="nav-link" href="#shop">Shop</a>
+                  <a class="nav-link" href="#services">Services</a>
+                  <a class="nav-link" href="#contact">Book Now</a>
+                  <button id="theme-switch">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main>
+        <section class="hero-container hero-image">
+            <div class="hero-text">
+                <h1 class="uppercase mb-4">Interior & <br>Exterior <br>Detailing</h1>
+                <h3>At <span class="uppercase company-name"><em>Phx Auto Care</em></span> we bring out the best in your vehicle by ensuring it shines with showroom quality and protection</h3>
+                <button class="btn btn-lg btn-light mt-4">
+                    <span class="uppercase">Explore Our Services</span>
+                    <i class="bi bi-arrow-right"></i>
+                </button>
+            </div>
+        </section>
+    
+        <section id="about-us">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center">
+                        <h2 class="head-text uppercase">About Us</h2>
+                        <p>Phx Auto Care is a locally owned and operated business proudly serving the Phoenix community with top-quality mobile auto detailing services. We specialize in bringing the shine back to your vehicle with a personalized touch, offering expert cleaning and detailing tailored to meet the unique needs of your car, truck, or SUV. Whether you drive a daily commuter or a luxury ride, our team is committed to delivering exceptional results with care and precision. As a Phoenix-based company, we understand the impact of the desert climate on your vehicle and use high-quality products and proven techniques to protect and restore your car’s appearance. With flexible mobile service, we come to you—at home, at work, or wherever it's most convenient—making it easier than ever to keep your vehicle looking its best.</p>
+                    </div>
+                </div>
+        
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <h3 class="uppercase">Our Mission</h3>
+                        <p>Our mission is to deliver an exceptional detailing service that enhances the look and longevity of your vehicle. We aim to offer the highest quality cleaning and detailing while providing convenient, mobile services at competitive prices.</p>
+                    </div>
+                    <div class="col-lg-6 col-md-12 text-center">
+                        <img src="images/steve-pancrate-9So1DqLv8tE-unsplash.jpg" alt="About Image" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        
+        <section id="shop">
+            <h2>Shop Our Merch</h2>
+            <div id="grid-container">
+                <section id="shopping">
+                    <section class="product" id="p1">
+                        <img src="images/p1.png" alt="" width="100%">
+                        <h4>T-Shirt</h4>
+                        <p class="price">$19.99</p>
+                        <p>Short-sleeve mens t-shirt with printed logo desgin in upper right corner</p>
+                        <label for="">
+                            <input type="checkbox">
+                            <span>Add to Cart</span>
+                        </label>
+                      </section>
+                      <section class="product" id="p2">
+                        <img src="images/p2.png" alt="" width="100%">
+                        <h4>T-Shirt</h4>
+                        <p class="price">$39.99</p>
+                        <p>Mens or womens hoodie with printed logo design in center</p>
+                        <label for="">
+                            <input type="checkbox">
+                            <span>Add to Cart</span>
+                        </label>
+                      </section>
+                      <section class="product" id="p3">
+                        <img src="images/p3.png" alt="" width="100%">
+                        <h4>T-Shirt</h4>
+                        <p class="price">$29.99</p>
+                        <p>Mens or womens long-sleeve sweatshirt with printed logo design in center</p>
+                        <label for="">
+                            <input type="checkbox">
+                            <span>Add to Cart</span>
+                        </label>
+                      </section>
+                </section>
+                <section id="cart">
+                    <div>
+                        <i class="bi bi-cart-fill"></i>
+                        <h3 class="uppercase">Your Cart</h3>
+                    </div>
+                    <ul id="selectedItems">
+                        <li id="cartMsg">Your cart is empty</li>
+                    </ul>
+                    <section id="cartTotal">
+                        <span>Sub-Total: </span>
+                        <span id="subTotal">$0.00</span>
+                        <span>Tax Rate: </span>
+                        <span>8.5%</span>
+                        <span>Shipping: </span>
+                        <span>Flat $5.00</span>
+                        <span>Cart Total: </span>
+                        <span id="total">$0.00</span>
+                        <button id="checkOut" class="btn btn-lg">Check Out</button>
+                    </section>
+                </section>
+            </div>
+        </section>
+
+        <section class="service-wrapper" id="services">
+            <div class="container justify-content-center">
+                <div class="row justify-content-center">
+                     <div class="col-12 text-center">
+                         <h2 class="head-text uppercase">Services</h2>
+                     </div>
+
+                      <!-- Service 1: Interior Package -->
+                     <div class="col-lg-4 col-md-6 col-sm-12 col-10 mb-4">
+                         <div class="service-box">
+                             <span><img class="img-fluid" src="images/interior.png" alt=""></span>
+                             <h2>Interior Package -<span class="dollar-sign">$120</span></h2>
+                             <ul>
+                                <li>Trim/Panel Surface Cleaning</li>
+                                <li>Full Decontamination</li>
+                                <li>Steam Treatment</li>
+                                <li>In Depth Vacuum/Extraction</li>
+                                <li>Leather/Suede Conditioning</li>
+                                <li>Door Jams</li>
+                                <li>Streakfree Windows</li>
+                                <li>Air Freshener</li>
+                             </ul>
+                         </div>
+                     </div>
+
+                     <!-- Service 2: Exterior Package -->
+                     <div class="col-lg-4 col-md-6 col-sm-12 col-10 mb-4">
+                         <div class="service-box">
+                             <span><img class="img-fluid" src="images/exterior.png" alt=""></span>
+                             <h2>Exterior Package -<span class="dollar-sign">$40</span></h2>
+                             <ul>
+                                <li>Pre Rinse</li>
+                                <li>Bug Remover</li>
+                                <li>Full Two Step Wash</li>
+                                <li>Deep Wheel/Tire Cleaning</li>
+                                <li>Rinse and Dry</li>
+                                <li>Wax and Seal</li>
+                                <li>Plastic Restorer</li>
+                                <li>Tire Dressing</li>
+                             </ul>
+                         </div>
+                     </div>
+
+                     <!-- Service 3: Full Package -->
+                     <div class="col-lg-4 col-md-6 col-sm-12 col-10 mb-4">
+                         <div class="service-box">
+                             <span><img class="img-fluid" src="images/full-package.png" alt=""></span>
+                             <h2>Full Package <br>-<span class="dollar-sign">$140</span></h2>
+                             <ul>
+                                <li>Both Interior And Exterior Package</li>
+                                <li>Paint Correction/Enhancment</li>
+                                <li>Engine Bay Detail</li>
+                                <li>Showroom Finish</li>
+                             </ul>
+                         </div>
+                     </div>
+
+                     <!-- Service 4: Ceramic Coating -->
+                     <div class="col-lg-4 col-md-6 col-sm-12 col-10 mb-4">
+                        <div class="service-box">
+                            <span><img class="img-fluid" src="images/coating.png" alt=""></span>
+                            <h2>Ceramic Coating -<span class="dollar-sign">$400</span></h2>
+                            <ul>
+                               <li>Full Exterior Wash</li>
+                               <li>Tire Shine</li>
+                               <li>Clay Bar</li>
+                               <li>2 Step Paint Correction</li>
+                               <li>9+ years ceramic coating</li>
+                            </ul>
+                        </div>
+                     </div>
+
+                     <!-- Service 5: Headlight Restoration -->
+                     <div class="col-lg-4 col-md-6 col-sm-12 col-10 mb-4">
+                        <div class="service-box">
+                            <span><img class="img-fluid" src="images/headlight.png" alt=""></span>
+                            <h2>Headlight Restoration -<span class="dollar-sign">$40 per headlight</span></h2>
+                            <ul>
+                                <li>2-Step Wash</li>
+                                <li>Light Shine</li>
+                                <li>Wax Sealant</li>
+                                <li>Sealant Wipe</li>
+                                <li>Sanding</li>
+                             </ul>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </section>
+        <section id="reviews" class="mb-5">
+            <h2>Reviews</h2>
+            <iframe src='https://widgets.sociablekit.com/google-reviews/iframe/25425431' frameborder='0' width='80%' height='1000'></iframe>
+        </section>
+    
+    
+        <section id="contact">
+            <div class="container-lg">
+                <div class="text-center form-head">
+                    <h2 class="uppercase">Book Now</h2>
+                    <p class="lead">Fill out the form below to contact me directly or book a time...</p>
+                    <p class="sub-text">Call <span>(480)-376-6367</span> for a free quote today!</p>
+                </div>
+    
+                <div class="row justify-content-center my-5">
+                    <div class="col-lg-6">
+                        <form action="https://wp.zybooks.com/form-viewer.php" method="post" target="_blank">
+                            <label for="fullname" class="form-label" id="name-label">Full Name <span class="required">*</span></label>
+                            <div class="mb-4 input-group" id="name-group">
+                                <span class="input-group-text">
+                                    <i class="bi bi-person-fill"></i>
+                                </span>
+                                <input type="text" class="form-control" id="fullname" placeholder="e.g. John Doe" name="fullName">
+                                <p class="hidden error-msg">Full name must be at least 1 characters and can include uppercase or lowercase letters, and (, . ' -)</p>
+                            </div>
+
+                            <fieldset class="form-group border p-2">
+                                <legend class="w-auto px-2 form-head">Method of Contact <span class="required">*</span></legend>
+                                <div class="form-check">
+                                    <input type="radio" name="preferences" id="phone-radio" value="phone" checked>
+                                    <p class="hidden"></p>
+                                    <label class="form-check-label radio-label" for="phone-radio">Phone</label>
+                                </div>
+                                <div class="form-check" id="email-radio-group">
+                                    <input type="radio" name="preferences" id="email-radio" value="email">
+                                    <label class="form-check-label radio-label" for="email-radio">Email</label>
+                                </div>
+                            </fieldset>
+    
+                            <label for="email" id="email-label" class="form-label">Email <span class="required" id="email-required">*</span></label>
+                            <div class="mb-4 input-group" id="email-group">
+                                <span class="input-group-text">
+                                    <i class="bi bi-envelope-fill"></i>
+                                </span>
+                                <input type="email" class="form-control" id="email" placeholder="e.g. johndoe@gmail.com" name="email">
+                                <p class="hidden error-msg">Please enter a valid email address</p>
+                            </div>
+    
+    
+                            <label for="phone" class="form-label">Phone Number <span class="required" id="phone-required">*</span></label>
+                            <div class="mb-4 input-group" id="phone-group">
+                                <span class="input-group-text">
+                                    <i class="bi bi-telephone-fill"></i>
+                                </span>
+                                <input type="text" class="form-control" id="phone" placeholder="e.g. 123-456-7890" name="number">
+                                <p class="hidden error-msg">Please enter a valid phone number e.g. 123-456-7890</p>
+                            </div>
+                    
+                            <label for="car" class="form-label">Vehicle <span class="required">*</span></label>
+                            <div class="mb-4 input-group">
+                                <span class="input-group-text">
+                                    <i class="bi bi-car-front-fill"></i>
+                                </span>
+                                <input type="text" class="form-control" id="car" placeholder="e.g. toyota prius" name="car">
+                                <p class="hidden error-msg">Please enter your vehicle/car</p>
+                            </div>
+    
+                            <label for="package" class="form-label">Pick a Package <span class="required">*</span></label>
+                            <select class="form-select " name="package" id="package">
+                                <option value="" selected></option>
+                                <option value="interior">Interior Package</option>
+                                <option value="exterior">Exterior Package</option>
+                                <option value="full">Full Package</option>
+                                <option value="ceramic coating">Ceramic Coating</option>
+                                <option value="headlight restoration">Headlight Restoration</option>
+                            </select>
+                            <p class="hidden error-msg">Please select a package</p>
+    
+                            <div class="form-floating mb-4 mt-4">
+                                <textarea id="comments" name="comments" class="form-control" style="height: 140px;"></textarea>
+                                <p class="hidden error-msg">Please enter any additonal information such as address, zip, or any questions you may have</p>
+                                <label for="comments" name="comments">Comments <span class="required">*</span></label>
+                            </div>
+    
+                            <div class="mb-4 text-center">
+                                <button type="submit" class="btn btn-lg uppercase" id="submitBtn">Submit</button>
+                            </div>
+                        </form>
+                        <section id="confirm" class="hidden">
+                            <p></p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- <section id="contact-reviews">
+            <div class="container-lg">
+                <div class="row">
+
+                    <div class="col-lg-6 mb-5" id="reviews">
+                        <h2>Reviews</h2>
+                        <iframe src='https://widgets.sociablekit.com/google-reviews/iframe/25425431' frameborder='0' width='100%' height='1000'></iframe>
+                    </div>
+        
+               
+                    <div class="col-lg-6" id="contact">
+                        <div class="text-center form-head">
+                            <h2 class="uppercase">Book Now</h2>
+                            <p class="lead">Fill out the form below to contact me directly or book a time...</p>
+                            <p class="sub-text">Call <span>(480)-376-6367</span> for a free quote today!</p>
+                        </div>
+        
+                        
+                        <div class="row justify-content-center my-5">
+                            <div class="col-lg-12">
+                                
+                                <form action="https://wp.zybooks.com/form-viewer.php" method="post" target="_blank">
+                                    <label for="fullname" class="form-label" id="name-label">Full Name <span class="required">*</span></label>
+                                    <div class="mb-4 input-group" id="name-group">
+                                        <span class="input-group-text">
+                                            <i class="bi bi-person-fill"></i>
+                                        </span>
+                                        <input type="text" class="form-control" id="fullname" placeholder="e.g. John Doe" name="fullName">
+                                        <p class="hidden error-msg">Full name must be at least 1 characters and can include uppercase or lowercase letters, and (, . ' -)</p>
+                                    </div>
+        
+                                    <fieldset class="form-group border p-2">
+                                        <legend class="w-auto px-2 form-head">Method of Contact <span class="required">*</span></legend>
+                                        <div class="form-check">
+                                            <input type="radio" name="preferences" id="phone-radio" value="phone" checked>
+                                            <p class="hidden"></p>
+                                            <label class="form-check-label radio-label" for="phone-radio">Phone</label>
+                                        </div>
+                                        <div class="form-check" id="email-radio-group">
+                                            <input type="radio" name="preferences" id="email-radio" value="email">
+                                            <label class="form-check-label radio-label" for="email-radio">Email</label>
+                                        </div>
+                                    </fieldset>
+            
+                                    <label for="email" id="email-label" class="form-label">Email <span class="required" id="email-required">*</span></label>
+                                    <div class="mb-4 input-group" id="email-group">
+                                        <span class="input-group-text">
+                                            <i class="bi bi-envelope-fill"></i>
+                                        </span>
+                                        <input type="email" class="form-control" id="email" placeholder="e.g. johndoe@gmail.com" name="email">
+                                        <p class="hidden error-msg">Please enter a valid email address</p>
+                                    </div>
+            
+            
+                                    <label for="phone" class="form-label">Phone Number <span class="required" id="phone-required">*</span></label>
+                                    <div class="mb-4 input-group" id="phone-group">
+                                        <span class="input-group-text">
+                                            <i class="bi bi-telephone-fill"></i>
+                                        </span>
+                                        <input type="text" class="form-control" id="phone" placeholder="e.g. 123-456-7890" name="number">
+                                        <p class="hidden error-msg">Please enter a valid phone number e.g. 123-456-7890</p>
+                                    </div>
+                            
+                                    <label for="car" class="form-label">Vehicle <span class="required">*</span></label>
+                                    <div class="mb-4 input-group">
+                                        <span class="input-group-text">
+                                            <i class="bi bi-car-front-fill"></i>
+                                        </span>
+                                        <input type="text" class="form-control" id="car" placeholder="e.g. toyota prius" name="car">
+                                        <p class="hidden error-msg">Please enter your vehicle/car</p>
+                                    </div>
+            
+                                    <label for="package" class="form-label">Pick a Package <span class="required">*</span></label>
+                                    <select class="form-select " name="package" id="package">
+                                        <option value="" selected></option>
+                                        <option value="interior">Interior Package</option>
+                                        <option value="exterior">Exterior Package</option>
+                                        <option value="full">Full Package</option>
+                                        <option value="ceramic coating">Ceramic Coating</option>
+                                        <option value="headlight restoration">Headlight Restoration</option>
+                                    </select>
+                                    <p class="hidden error-msg">Please select a package</p>
+            
+                                    <div class="form-floating mb-4 mt-4">
+                                        <textarea id="comments" name="comments" class="form-control" style="height: 140px;"></textarea>
+                                        <p class="hidden error-msg">Please enter any additonal information such as address, zip, or any questions you may have</p>
+                                        <label for="comments" name="comments">Comments <span class="required">*</span></label>
+                                    </div>
+            
+                                    <div class="mb-4 text-center">
+                                        <button type="submit" class="btn btn-lg uppercase" id="submitBtn">Submit</button>
+                                    </div>
+                                </form>
+                                <section id="confirm" class="hidden">
+                                    <p></p>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        
+    </main>
+    
+
+    <footer>
+        <div class="logo-container container">
+            <a href="https://www.instagram.com/phxautocare/">
+                <i class="bi bi-instagram"></i>
+            </a>
+            <a href="tel:+14803766367">
+                <i class="bi bi-telephone-fill"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+
+</html>
