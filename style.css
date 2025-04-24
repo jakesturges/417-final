@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap');
+
+
 :root {
     --main-background: black;
     --text-color: #fff;
@@ -66,18 +69,23 @@ html {
     font-size: 100%;
 }
 
+h1, h2, h3, h4 {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
 h1 {
     font-weight: 600;
-    font-size: 3.2rem;
+    font-size: 5rem;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 700;
 }
 
 h3 {
     font-weight: normal;
+    font-size: 2rem;
     line-height: 2.2rem;
     margin-top: 1rem;
     width: 80%;
@@ -103,6 +111,11 @@ button span {
 
 .primary-header {
     border-bottom: solid 2px #fff;
+}
+
+.nav-link {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
 }
 
 /* HERO SECTION  */
@@ -138,6 +151,7 @@ button span {
     margin-top: 8rem;
 }
 
+
 /* ABOUT US SECTION  */
 
 #about-us {
@@ -145,6 +159,13 @@ button span {
     margin-bottom: 5rem;
     padding-bottom: 5rem;
 }
+
+.head-text {
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: var(--secondary-color);
+}
+
 
 #about-us h3 {
     color: var(--secondary-color);
@@ -287,13 +308,6 @@ button span {
 
 .service-wrapper img {
     width: 100px;
-}
-
-.head-text {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 30px;
-    color: var(--secondary-color);
 }
 
 .service-box {
@@ -572,7 +586,7 @@ footer {
 
 @media (min-width: 1100px) {
     .nav-link {
-        font-size: 1rem;
+        font-size: 1.5rem;
         text-transform: uppercase;
         letter-spacing: 2px;
         margin-right: 2rem;
@@ -583,7 +597,7 @@ footer {
       margin-left: 5rem;
     }
     .hero-text h1 {
-        font-size: 7vw;
+        font-size: 8rem;
     }
     .hero-text p {
         font-size: 1rem;
