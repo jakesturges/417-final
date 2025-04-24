@@ -159,7 +159,7 @@ document.querySelector("form").addEventListener("submit", validateForm);
 
 
 //Shoping cart functionality 
-let shopingCart = () => {
+let shoppingCart = () => {
     //constant variables
     const taxRate = 0.085;
     const shippingCost = 5.00;
@@ -169,7 +169,7 @@ let shopingCart = () => {
     let subTotal = document.getElementById("subTotal");
     let total = document.getElementById("total");
     let selectedItems = document.getElementById("selectedItems");
-    let checkOutBtn = document.getElementById("checkout");
+    let checkOutBtn = document.getElementById("checkOut");
     let checkboxes = document.querySelectorAll("#shopping input[type='checkbox']");
 
     //Map to hold cart items
@@ -177,6 +177,71 @@ let shopingCart = () => {
 
     //function to update cart
     let updateCartDisplay = () => {
+        selectedItems.innerHTML = "";
+        let totalPrice = 0;
 
-    }
+        if (cart.size === 0) {
+            selectedItems.innerHTML = `<li id="cartMsg">Your cart is empty</li>`;
+        } else {
+            cart.forEach((price, itemName) => {
+                let item = document.createElement("li");
+                item.textContent = `${itemName} - $${price.toFixed(2)}`;
+                selectedItems.appendChild(item);
+                totalPrice += price;
+            });
+        }
+        
+        let taxPrice = totalPrice * taxRate;
+        let grandTotal;
+        if (totalPrice === 0) {
+            grandTotal = 0;
+        } else {
+            grandTotal = totalPrice + taxPrice + shippingCost;
+        }
+
+        subTotal.textContent = `$${totalPrice.toFixed(2)}`;
+        total.textContent = `$${grandTotal.toFixed(2)}`;
+    };
+
+    //add event listeners to checkboxes and add products to map and call updateCartDisplay()
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener("change", function() {
+            //searches the DOM for the closets product class on the checkbox that we click
+            let product = this.closest(".product");
+            let productName = product.querySelector("h4").textContent;
+            //replace $ or you will get NaN displayed in output
+            let productPrice = parseFloat(product.querySelector(".price").textContent.replace("$", ""));
+
+            if (this.checked) {
+                cart.set(productName, productPrice);
+            } else {
+                cart.delete(productName);
+            }
+
+            updateCartDisplay();
+        });
+    });
+
+    //Event listener for checkout button
+    checkOutBtn.addEventListener("click", () => {
+        console.log("Checkout clicked");
+        if (cart.size === 0) {
+            selectedItems.innerHTML = `<li>Your cart is empty. Please add something to check out.</li>`;
+            return;
+        } else {
+            let totalPrice = 0;
+            cart.forEach(price => totalPrice += price);
+            let taxPrice = totalPrice * taxRate;
+            let grandTotal = totalPrice + taxPrice + shippingCost;
+    
+            selectedItems.innerHTML = `<li>Thanks for your order! Your total is $${grandTotal.toFixed(2)}</li>`;
+            cart.clear();
+            checkboxes.forEach(checkbox => checkbox.checked = false);
+        }
+        // updateCartDisplay();
+    });
+    
 }
+
+//Initialize Cart
+shoppingCart();
