@@ -224,10 +224,11 @@ let shoppingCart = () => {
 
     //Event listener for checkout button
     checkOutBtn.addEventListener("click", () => {
-        console.log("Checkout clicked");
+        //if users tries to checkout empty cart display message
         if (cart.size === 0) {
             selectedItems.innerHTML = `<li>Your cart is empty. Please add something to check out.</li>`;
             return;
+        //if users tries to checkout with cartItems display message and clear cart/checkboxes
         } else {
             let totalPrice = 0;
             cart.forEach(price => totalPrice += price);
