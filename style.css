@@ -143,6 +143,7 @@ button span {
 #about-us {
     color: var(--text-color);
     margin-bottom: 5rem;
+    padding-bottom: 5rem;
 }
 
 #about-us h3 {
@@ -168,6 +169,7 @@ button span {
 #shop h2 {
     text-align: center;
     color: var(--secondary-color);
+    margin-bottom: 3rem;
 }
 
 #grid-container {
@@ -182,6 +184,7 @@ button span {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
     row-gap: 1rem;
+    padding: 1rem;
 }
 
 .product {
