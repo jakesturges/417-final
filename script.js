@@ -185,6 +185,7 @@ let shoppingCart = () => {
         } else {
             cart.forEach((price, itemName) => {
                 let item = document.createElement("li");
+                //use toFixed to only allow 2 decimal places
                 item.textContent = `${itemName} - $${price.toFixed(2)}`;
                 selectedItems.appendChild(item);
                 totalPrice += price;
@@ -235,11 +236,17 @@ let shoppingCart = () => {
             let taxPrice = totalPrice * taxRate;
             let grandTotal = totalPrice + taxPrice + shippingCost;
     
+            //thank you message
             selectedItems.innerHTML = `<li>Thanks for your order! Your total is $${grandTotal.toFixed(2)}</li>`;
+
+            //clear cart and checkboxes
             cart.clear();
             checkboxes.forEach(checkbox => checkbox.checked = false);
+
+            //clear out totals
+            subTotal.textContent = "$0.00";
+            total.textContent = "$0.00";
         }
-        // updateCartDisplay();
     });
     
 }
